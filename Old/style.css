@@ -1,0 +1,157 @@
+body{
+    --primary-color: rgb(27, 130, 193);
+    --button-color: rgb(17, 255, 0);
+}
+
+body.dark {
+    --primary-color: rgb(50, 50, 50);
+    --button-color: rgb(180, 180, 180);
+    background-color: #121212;
+    color: #ffffff;
+} 
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    grid-area: song-list player playlists;
+}
+
+header {
+    text-align: center;
+}
+
+body.dark header {
+    color: #ffffff;
+}
+
+.toggledark {
+    display: flex;
+    justify-self: right;
+}
+
+button {
+    background-color: var(--button-color);
+    border: none;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+.section {
+    border: 1px solid black;
+    background-color: turquoise;
+}
+
+body.dark .section {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.filter-list {
+    display: flex;
+    justify-self: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 1.2rem;
+}
+
+.song-item, .playlist-item, .current-playlist-container div {
+    display: flex;
+    justify-self: center;
+    font-size: 1.25rem;
+    /* border: 1px solid red; */
+    margin-bottom: 3%;
+    padding: 2%;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.song-image {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.song-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.player-section {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.song-controls audio{
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.song-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-playlist {
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    padding: 3%;
+    font-weight: bold;
+}
+
+.next-previous {
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+.next-previous button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.create-playlist {
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    padding: 1%;
+}
+
+.create-playlist input {
+    padding: 1%;
+    font-size: 1rem;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.playlists {
+    text-align: center;
+}
